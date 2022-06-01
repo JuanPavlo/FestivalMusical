@@ -1,4 +1,4 @@
-$rojo: yellow;
-body {
-    background-color: $rojo;
-}
+@use "base/variables" as v;
+
+
+
