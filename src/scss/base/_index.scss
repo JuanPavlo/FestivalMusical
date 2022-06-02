@@ -1,1 +1,6 @@
-@forward "_variables.scss";
+//El orden es importante
+
+@forward "variables";
+@forward    "mixins";
+@forward "normalize";
+@forward  "globales";
