@@ -1,18 +1,40 @@
-@use "../base/variables" as v;
-@use "../base/mixins" as m;
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .header {
     background-color: v.$verde;
     // Anidación 
     h1 {
         color: v.$blanco;
+        text-align: center;
+        @include m.tablet {
+            margin: 0; // se le quita la margen ya que los titulos tienen margen por defecto
+        }
+    }
+    .contenido-header {
+        padding: 2rem;
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }
 
 .navegacion-principal {
+    @include m.tablet {
+        display:flex;
+        gap: 2rem;
+    }
     a {
+        display: block; // para que los enlaces se pongan de arriba hacia abajo
+        text-align: center;
         color: v.$blanco;
         font-size: 2.4rem;
+        margin-bottom: 1rem;
+        @include m.tablet {
+            margin: 0;
+        }
         &:hover {
             color: v.$amarillo;
             font-weight: 700;
@@ -20,13 +42,6 @@
     }
 }
 
-// .prueba {
-//     @include m.heading(v.$amarillo, bordesito); // se enviar un argumento al mixin
-// }
-
-// p {
-//     @include m.heading;
-// }
 
 
 
