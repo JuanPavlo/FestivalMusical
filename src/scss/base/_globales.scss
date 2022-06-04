@@ -16,6 +16,12 @@ html {
 body {
     font-family: v.$fuente_principal;
     font-size: 1.6rem; // 16 pixeles
+    &.fijar-body {
+        overflow: hidden;
+    }
+    &.body-scroll {
+        padding-top: 8.6rem;
+    }
 }
 
 p {
@@ -52,5 +58,7 @@ h3 {
 
 img {
     max-width: 100%;
+    width: 100%;
+    height: auto;
     display: block;
 }

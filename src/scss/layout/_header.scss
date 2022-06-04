@@ -3,6 +3,15 @@
 
 .header {
     background-color: v.$verde;
+    @include m.tablet {
+        &.fijo {
+            left: 0;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: .3rem .3rem .3rem #333333;
+        }
+    }
     // Anidación 
     h1 {
         color: v.$blanco;
